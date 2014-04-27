@@ -1,3 +1,9 @@
+fonts-casablanca (3.4.7) trusty; urgency=high
+
+  * set Droid Sans as default font for Arabic script
+
+ -- Amr Osman <dr3mro@gmail.com>  Mon, 28 Apr 2014 01:11:21 +0200
+
 fonts-casablanca (3.4.6) trusty; urgency=high
 
   * Clean original tar and compress to lzma

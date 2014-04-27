@@ -1,8 +1,27 @@
 #!/bin/bash
+font="Droid Sans"
+echo "Update font cache"
+sleep 1;
+fc-cache -sv
+echo "Font Cache is now Up to date"
+sleep 1;
+echo "Enabling autohint"
 if [ ! -f /etc/fonts/conf.d/10-autohint.conf ]; then 
-	echo enabling autohint	
-	sudo ln -sf /etc/fonts/conf.avail/10-autohint.conf /etc/fonts/conf.d/ && echo autohint is enabled successfully.;
+    sudo ln -sf /etc/fonts/conf.avail/10-autohint.conf /etc/fonts/conf.d/ && echo autohint is enabled successfully.;
+    echo "Autohint Enabled"
 else 
-	echo autohint is already enabled
+    echo "Autohint is already enabled"
 fi
 
+echo "Setting Default font for Arabic script to Droid Sans"
+sleep 1;
+echo "Creating the font Conf file"
+sudo echo -e "<?xml version=\"1.0\"?>\r\n<!DOCTYPE fontconfig SYSTEM \"fonts.dtd\">\r\n<fontconfig>\r\n\t<!-- Arabic (ar) -->\r\n\t<match target=\"pattern\">\r\n\t\t<test name=\"lang\" compare=\"contains\">\r\n\t\t\t<string>ar</string>\r\n\t\t</test>\r\n\t\t<test qual=\"any\" name=\"family\">\r\n\t\t\t<string>serif</string>\r\n\t\t</test>\r\n\t\t<edit name=\"family\" mode=\"prepend\" binding=\"strong\">\r\n\t\t\t<string>$font</string>\r\n\t\t</edit>\r\n\t</match>\r\n\r\n\r\n\t<match target=\"pattern\">\r\n\t\t<test name=\"lang\" compare=\"contains\">\r\n\t\t\t<string>ar</string>\r\n\t\t</test>\r\n\t\t<test qual=\"any\" name=\"family\">\r\n\t\t\t<string>sans-serif</string>\r\n\t\t</test>\r\n\t\t<edit name=\"family\" mode=\"prepend\" binding=\"strong\">\r\n\t\t\t<string>$font</string>\r\n\t\t</edit>\r\n\t</match>\r\n\r\n\r\n\t<match target=\"pattern\">\r\n\t\t<test name=\"lang\" compare=\"contains\">\r\n\t\t\t<string>ar</string>\r\n\t\t</test>\r\n\t\t<test qual=\"any\" name=\"family\">\r\n\t\t\t<string>monospace</string>\r\n\t\t</test>\r\n\t\t<edit name=\"family\" mode=\"prepend\" binding=\"strong\">\r\n\t\t\t<string>Thabit</string>\r\n\t\t   \r\n\t\t</edit>\r\n\t</match>\r\n\t<!-- Arabic (ar) ends -->\r\n</fontconfig>" > /etc/fonts/conf.d/69-language-selector-ar.conf;
+sleep 2;
+echo "Checking if file exists"
+if [ ! -e /etc/fonts/conf.d/69-language-selector-ar.conf ]; then 
+    echo "Creating Symlink"
+    sudo ln -s /etc/fonts/conf.avail/69-language-selector-ar.conf /etc/fonts/conf.d/69-language-selector-ar.conf
+    echo "Done"
+fi
+echo "Postinstall script end"
