@@ -1,0 +1,8 @@
+#!/bin/bash
+if [ ! -f /etc/fonts/conf.d/10-autohint.conf ]; then 
+	echo enabling autohint	
+	sudo ln -sf /etc/fonts/conf.avail/10-autohint.conf /etc/fonts/conf.d/ && echo autohint is enabled successfully.;
+else 
+	echo autohint is already enabled
+fi
+

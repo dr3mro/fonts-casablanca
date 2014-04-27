@@ -1,0 +1,37 @@
+fonts-casablanca (3.4.6) trusty; urgency=high
+
+  * Clean original tar and compress to lzma
+
+ -- Amr Osman <dr3mro@gmail.com>  Sun, 27 Apr 2014 15:58:37 +0200
+
+fonts-casablanca (3.4.5-1) trusty; urgency=high
+
+  * change ttf-droid to fonts-droid
+
+ -- Amr Osman <dr3mro@gmail.com>  Sun, 27 Apr 2014 15:46:35 +0200
+
+fonts-casablanca (3.4.5) saucy; urgency=high
+
+  * Remove ttf-ubuntu-title font as it' not any more on repository
+    and add it natively yo tha package
+
+ -- Amr Osman <dr3mro@gmail.com>  Tue, 30 Jul 2013 19:26:35 +0200
+
+fonts-casablanca (3.4.4) raring; urgency=high
+
+  *Add Cocon Next Arabic font
+
+ -- Amr Osman <dr3mro@gmail.com>  Wed, 17 Jul 2013 08:30:00 +0200
+ 
+fonts-casablanca (3.4.2) precise; urgency=high
+
+  * Fix packaging error
+  * Adds More fonts to ttf-casablanca-extra
+
+ -- Amr Osman <dr3mro@gmail.com>  Sun, 17 Jun 2012 07:22:24 +0200
+
+fonts-casablanca (3.4) precise; urgency=high
+
+  * Initial release
+
+ -- Amr Osman <dr3mro@gmail.com>  Sun, 17 Jun 2012 07:22:24 +0200

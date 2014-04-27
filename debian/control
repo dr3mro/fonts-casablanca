@@ -1,0 +1,27 @@
+Source: fonts-casablanca
+Section: fonts
+Priority: optional
+Maintainer: Amr Osman <dr3mro@gmail.com>
+Build-Depends: debhelper (>= 8.0.0)
+Standards-Version: 3.9.3
+Homepage: 
+
+Package: fonts-casablanca
+Architecture: all
+Depends: ttf-casablanca-core , ttf-casablanca-extra ,ttf-freefont , fonts-droid,fonts-hosny-thabit ,fonts-hosny-amiri, ttf-dejavu,ttf-kacst,ttf-kacst-one , ttf-sil-scheherazade,ttf-ubuntu-font-family
+Description: fonts-casablanca
+ This is a Metapackage to install ttf-casablanca-core and ttf-casablanca-extra and other fonts from the ubuntu repositories
+ This packages are for arabic and english fonts mainly
+
+Package: ttf-casablanca-core
+Architecture: all
+Depends: 
+Description: This is the core fonts copied from MS windows 7 SP1 CD
+ Those are number of most used fonts ( arabic and english )
+
+Package: ttf-casablanca-extra
+Architecture: all
+Depends: 
+Description: This is extra fonts else where not included in Windows CD
+ Those fonts are pretty fonts maily arabic language
+
