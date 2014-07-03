@@ -1,3 +1,9 @@
+fonts-casablanca (3.4.8) trusty; urgency=high
+
+  * update Cocon Next Font
+
+ -- Amr Osman <dr3mro@gmail.com>  Thu, 03 Jul 2014 18:36:20 +0200
+
 fonts-casablanca (3.4.7) trusty; urgency=high
 
   * set Droid Sans as default font for Arabic script
