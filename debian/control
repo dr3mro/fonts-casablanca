@@ -8,7 +8,7 @@ Homepage:
 
 Package: fonts-casablanca
 Architecture: all
-Depends: ttf-casablanca-core , ttf-casablanca-extra ,ttf-freefont , fonts-droid,fonts-hosny-thabit ,fonts-hosny-amiri, ttf-dejavu,ttf-kacst,ttf-kacst-one , ttf-sil-scheherazade,ttf-ubuntu-font-family
+Depends: ttf-casablanca-core , ttf-casablanca-extra ,ttf-freefont ,fonts-hosny-thabit ,fonts-hosny-amiri, ttf-dejavu,ttf-kacst,ttf-kacst-one , ttf-sil-scheherazade,ttf-ubuntu-font-family
 Description: fonts-casablanca
  This is a Metapackage to install ttf-casablanca-core and ttf-casablanca-extra and other fonts from the ubuntu repositories
  This packages are for arabic and english fonts mainly
